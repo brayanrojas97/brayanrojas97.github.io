@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Cliente - Boot Camp Gym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #5A5EE8, #ffffff);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            padding-top: 60px;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .content h4 {
+            margin-bottom: 10px;
+        }
+
+        .content h5 {
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            width: 48%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <img src="Img/Logo 1.2.png" alt="Logo Boot Camp Gym">
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+        <a href="#">Atajos Rápidos</a>
+        <a href="#">Usuario</a>
+    </nav>
+
+    <!-- Barra lateral -->
+    <nav class="sidebar">
+        <a href="#">Inicio</a>
+        <a href="#">Clientes</a>
+        <a href="#">Membresías</a>
+        <a href="#">Pagos</a>
+        <a href="#">Clases</a>
+        <a href="#">Instructores</a>
+        <a href="#">Reportes</a>
+        <a href="#">Configuración</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h4>Inicio > Clientes > Agregar Cliente</h4>
+
+        <div class="form-container">
+            <form action="" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Valor">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Valor">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="identificacion">Número de identificación</label>
+                        <input type="text" id="identificacion" name="identificacion" placeholder="Valor">
+                    </div>
+                    <div class="form-group">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="Valor">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Valor">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Valor">
+                    </div>
+                    <div class="form-group">
+                        <label for="rh">RH</label>
+                        <input type="text" id="rh" name="rh" placeholder="Valor">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha-registro">Fecha de registro</label>
+                        <input type="date" id="fecha-registro" name="fecha-registro">
+                    </div>
+                    <div class="form-group">
+                        <label for="hora-registro">Hora de registro</label>
+                        <input type="time" id="hora-registro" name="hora-registro">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Siguiente</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Administración Boot Camp Gym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #5A5EE8, #ffffff);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 100px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            padding-top: 60px;
+            overflow-y: auto;
+        }
+
+        .sidebar h5 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <img src="Img/Logo 1.2.png" alt="Logo Boot Camp Gym">
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+        <a href="#">Atajos Rápidos</a>
+        <a href="#">Usuario</a>
+    </nav>
+
+    <!-- Barra lateral -->
+    <nav class="sidebar">
+        <h5>Centro de Administración Boot Camp Gym</h5>
+        <a href="#">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="#">Membresías</a>
+        <a href="#">Pagos</a>
+        <a href="#">Clases</a>
+        <a href="#">Instructores</a>
+        <a href="#">Reportes</a>
+        <a href="#">Configuración</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h4>Inicio</h4>
+        <div class="card-container">
+            <div class="card">
+                <img src="Img/Clientes.png" alt="Clientes">
+                <p>Clientes</p>
+            </div>
+            <div class="card">
+                <img src="Img/membresias.png" alt="Membresías">
+                <p>Membresías</p>
+            </div>
+            <div class="card">
+                <img src="Img/pagos.png" alt="Pagos">
+                <p>Pagos</p>
+            </div>
+            <div class="card">
+                <img src="Img/clases.png" alt="Clases">
+                <p>Clases</p>
+            </div>
+            <div class="card">
+                <img src="Img/instructores.png" alt="Instructores">
+                <p>Instructores</p>
+            </div>
+            <div class="card">
+                <img src="Img/reportes.png" alt="Reportes">
+                <p>Reportes</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
