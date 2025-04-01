@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - Boot Camp Gym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #5A5EE8, #ffffff);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            padding-top: 60px;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .content h4 {
+            margin-bottom: 10px;
+        }
+
+        .content h5 {
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-buttons {
+            margin-bottom: 15px;
+        }
+
+        .action-buttons a {
+            margin-right: 20px;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .action-buttons a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .checkbox {
+            text-align: center;
+        }
+
+        td[data-label] {
+            word-wrap: break-word;
+        }
+
+        /* Hacer tabla responsiva en dispositivos móviles */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            table thead {
+                display: none;
+            }
+
+            table, tbody, tr, td {
+                display: block;
+                width: 100%;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border-bottom: 2px solid #ddd;
+            }
+
+            td {
+                text-align: left;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            td.checkbox {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <img src="Img/Logo 1.2.png" alt="Logo Boot Camp Gym">
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+        <a href="#">Atajos Rápidos</a>
+        <a href="#">Usuario</a>
+    </nav>
+
+    <!-- Barra lateral -->
+    <nav class="sidebar">
+        <a href="../inicio.html">Inicio</a>
+        <a href="../Clientes/clientes.html">Clientes</a>
+        <a href="../Membresias/membresias.html">Membresías</a>
+        <a href="pagos.html">Pagos</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h4>Inicio > Pagos</h4>
+        <h5>Historial de pagos</h5>
+
+        <div class="table-container">
+            <!-- Botones de acción -->
+            <div class="action-buttons">
+                <a href="agregar-pago.html">💳 Registrar pago</a>
+                <a href="#">🔄 Actualizar pagos</a>
+                <a href="#">📊 Reporte de pagos</a>
+            </div>
+
+            <!-- Tabla de pagos -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="checkbox"><input type="checkbox"></th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Fecha de pago</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td data-label="Cliente">Andres Camilo Rodriguez</td>
+                        <td data-label="Monto">$50,000</td>
+                        <td data-label="Fecha de pago">2024-10-01</td>
+                        <td data-label="Estado">Pagado</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td data-label="Cliente">Luisa Andrea Lopez</td>
+                        <td data-label="Monto">$30,000</td>
+                        <td data-label="Fecha de pago">2024-09-28</td>
+                        <td data-label="Estado">Pagado</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox"><input type="checkbox"></td>
+                        <td data-label="Cliente">Wilson Fabian Corredin</td>
+                        <td data-label="Monto">$40,000</td>
+                        <td data-label="Fecha de pago">2024-10-02</td>
+                        <td data-label="Estado">Pendiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
