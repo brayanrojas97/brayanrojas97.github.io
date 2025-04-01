@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Cliente - Boot Camp Gym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #5A5EE8, #ffffff);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 80px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            padding-top: 60px;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .content h4 {
+            margin-bottom: 10px;
+        }
+
+        .content h5 {
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            width: 48%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+        /* Estilos para el select */
+        select.form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 16px;
+            appearance: none; /* Oculta la flecha nativa en algunos navegadores */
+        }
+
+        /* Agregar un icono de flecha para el select */
+        select.form-control {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+            padding-right: 30px;
+        }
+
+        /* Efecto al pasar el mouse */
+        select.form-control:hover {
+            border-color: #aaa;
+        }
+
+        /* Cuando el select está en foco */
+        select.form-control:focus {
+            border-color: #5A5EE8;
+            outline: none;
+            box-shadow: 0 0 5px rgba(90, 94, 232, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <img src="../Img/Logo 1.2.png" alt="Logo Boot Camp Gym">
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+        <a href="#">Atajos Rápidos</a>
+        <a href="#">Usuario</a>
+    </nav>
+
+    <!-- Barra lateral -->
+    <nav class="sidebar">
+        <a href="../inicio.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="../Membresias/membresias.html">Membresías</a>
+        <a href="../Pagos/pagos.html">Pagos</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h4>Inicio > Clientes > Agregar Cliente</h4>
+
+        <!-- Formulario para agregar cliente -->
+        <div class="form-container">
+            <form id="clienteForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Valor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Valor" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="identificacion">Número de identificación</label>
+                        <input type="text" id="identificacion" name="identificacion" placeholder="Valor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="Valor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Valor" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Valor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rh">RH</label>
+                        <input type="text" id="rh" name="rh" placeholder="Valor" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha de registro</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="membership" class="form-label">Tipo de Membresía:</label>
+                        <select id="membership" name="membresia_id" class="form-control">
+                            <option value="">Selecciona una membresía</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Siguiente</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("clienteForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const clienteData = Object.fromEntries(formData.entries());
+
+            // ✅ Guardamos los datos del cliente temporalmente
+            localStorage.setItem("clienteData", JSON.stringify(clienteData));
+
+            // 🔄 Ir a la página de contacto de emergencia
+            window.location.href = "contacto-emergencia.html";
+        });
+    </script>
+
+
+<!-- Script para mostrar las membresias Node.js -->
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    fetch("http://localhost:3000/api/memberships")
+        .then(response => response.json())
+        .then(data => {
+            console.log("Membresías recibidas:", data); // 🔍 Verifica si llegan los datos
+            const membershipSelect = document.getElementById("membership");
+
+            data.forEach(membership => {
+                console.log("Agregando opción:", membership.tipomembresia); // 🔍 Ver cada opción agregada
+                const option = document.createElement("option");
+                option.value = membership.id;
+                option.textContent = membership.tipomembresia; // 🔄 Aquí se usa el nombre correcto
+                membershipSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error("Error cargando membresías:", error));
+});
+</script>
+</body>
+</html>
